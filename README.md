@@ -54,7 +54,19 @@ cube.userData.home = cube.position.clone();
 cubes.push(cube);
 group.add(cube);
 ```
+**`cube.position.set(x, y, z);`**  
+Coloca cada mini-cubo en su posición correspondiente dentro de la grilla 3×3×3.  
+Esto forma el cubo inicial, que actúa como base para todas las transformaciones posteriores.
 
+**`cube.userData.home = cube.position.clone();`**  
+Guarda la posición original del cubo.  
+Es fundamental para poder volver al modo “cubo” desde cualquier forma (esfera, espiral, ADN, etc.).
+
+**`cubes.push(cube);`**  
+Añade el cubo al array global `cubes[]`, lo cual permite manipularlos de manera individual en las transformaciones.
+
+**`group.add(cube);`**  
+Añade el cubo al grupo principal, permitiendo moverlos a todos como una sola entidad (rotación, animación global).
 ---
 
 ##  Animación global del sistema
