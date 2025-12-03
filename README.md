@@ -53,7 +53,7 @@ cube.position.set(x, y, z);
 cube.userData.home = cube.position.clone();
 cubes.push(cube);
 group.add(cube);
-
+```
 
 ---
 
@@ -65,7 +65,7 @@ Este bloque define la animación base que afecta continuamente a todos los cubos
 group.rotation.y += 0.002;
 c.scale.set(s, s, s);
 c.material.color.setHSL(hue, 0.7, 0.5);
-
+```
 ### Explicación dentro del contexto del proyecto
 
 **`group.rotation.y += 0.002;`**  
@@ -92,7 +92,7 @@ cube.position.set(x, y, z);
 cube.userData.home = cube.position.clone();
 cubes.push(cube);
 group.add(cube);
-
+```
 **`cube.position.set(x, y, z);`**  
 Coloca cada mini-cubo en su posición correspondiente dentro de la grilla 3×3×3.  
 Esto forma el cubo inicial, que actúa como base para todas las transformaciones posteriores.
@@ -121,7 +121,7 @@ target = {
   y: r * Math.cos(phi),
   z: r * Math.sin(phi) * Math.sin(theta)
 };
-
+```
 
 **`phi = Math.acos(2 * (i / cubes.length) - 1);`**  
 Calcula el ángulo polar de manera uniforme usando una técnica de distribución esférica.  
@@ -151,7 +151,7 @@ target = {
   z: Math.sin(a) * r * 0.2
 };
 
-
+```
 **`const a = i * 0.4;`**  
 Ángulo creciente que define la rotación de la hélice.
 
@@ -175,7 +175,7 @@ target = {
   y: Math.sin(i * freq) * amp,
   z: Math.cos(i * freq * 0.7) * amp * 0.5
 };
-
+```
 **`x = (i - 13) * step;`**  
 Distribuye los cubos de forma lineal a lo largo del eje X.
 
@@ -201,7 +201,7 @@ target = {
   y: height,
   z: Math.sin(t) * radius
 };
-
+```
 **`const helixIndex = i % 3;`**  
 Divide los cubos en tres grupos:  
 - Hélice izquierda  
@@ -232,7 +232,7 @@ target = {
   y: Math.sin(t * 2) * 0.3,
   z: i * 0.25 - 3
 };
-
+```
 **`type = i % 2 ? "red" : "blue";`**  
 Alterna cada cubo entre azul y rojo, formando dos hebras visuales simples.
 
